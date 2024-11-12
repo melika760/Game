@@ -1,0 +1,21 @@
+.container{
+    width: 50%;
+    margin:3rem auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+  gap: 16px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.imgwrap{
+    background-color: white;
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}

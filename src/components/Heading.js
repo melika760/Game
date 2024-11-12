@@ -6,9 +6,10 @@ const Heading = () => {
   <header className={styles.heading}>
    
 <img src={logo} alt='logo' className={styles.Img}/>
-<div className={styles.content}>
-    <p>Score</p>
-    <h1>12</h1>
+<div className={styles.contents}>
+<p>Score</p>
+<h2>12</h2>
+   
 </div>
   </header>
   )
