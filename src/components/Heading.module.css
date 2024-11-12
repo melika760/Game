@@ -1,0 +1,24 @@
+.heading{
+    display: flex;
+    border: 1px solid white;
+    justify-content: space-between;
+  margin:3rem auto;
+    border-radius: 8px;
+   width: 50%;
+   box-sizing: content-box ;
+   height: 200px;
+   align-items: center;
+}
+.content{
+background-color: white;
+padding: 35px ;
+border-radius: 8px;
+height: 100px;
+margin: 2rem;
+align-items: center;
+
+}
+.Img{
+    margin: 2rem;
+    height: 100px;
+}
