@@ -33,7 +33,7 @@ const Play = () => {
      : "rgb(249, 216, 6)";
 return(
     <div className={styles.imgwrap} style={{border:`20px solid ${bordercolor}`}}>
-        <img src={item.img} alt={item.name} width={70} height={70} className={styles.games}/>
+        <img src={item.img} alt={item.name} width={70} height={70}/>
     </div>
   )
         })}
