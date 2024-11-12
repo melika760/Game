@@ -24,22 +24,20 @@ const Play = () => {
 ]
   return (
     <section className={styles.container}>
+        <div className={styles.wrap}>
         {Items.map((item)=>{
-            let bordercolor;
-        if(item.color==="blue"){
-            bordercolor="rgb(41, 41, 188)"
-        }else if(item.color==="red"){
-            bordercolor="rgb(224, 46, 88)"
-        }else{
-            bordercolor="rgb(249, 216, 6)"
-        }
-return(<div className={styles.wrap}>
-    <div className={styles.imgwrap} style={{border:`30px solid ${bordercolor}`}}>
-        <img src={item.img} alt={item.name} width={70} height={70}/>
+     let bordercolor = item.color === "blue" 
+     ? "rgb(41, 41, 188)"
+     : item.color === "red"
+     ? "rgb(224, 46, 88)"
+     : "rgb(249, 216, 6)";
+return(
+    <div className={styles.imgwrap} style={{border:`20px solid ${bordercolor}`}}>
+        <img src={item.img} alt={item.name} width={70} height={70} className={styles.games}/>
     </div>
-  </div>)
+  )
         })}
-      
+      </div>
       <div></div>
     </section>
   )

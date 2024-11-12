@@ -1,9 +1,27 @@
+
 .container{
-    width: 50%;
+    width: 30%;
     margin:3rem auto;
+    display: flex;
+   flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    background-image: url('../images//bg-triangle.svg');
+    background-repeat: no-repeat; 
+  background-position: center; 
+  background-size: contain; 
+}
+.wrap > .imgwrap:last-child  {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+.wrap{
+    cursor: pointer;
+    padding: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr; 
-  gap: 16px;
+  gap: 10rem;
     justify-content: center;
     justify-items: center;
     align-items: center;
@@ -12,10 +30,15 @@
 .imgwrap{
     background-color: white;
     border-radius: 100%;
-    width: 150px;
-    height: 150px;
+    width: 147px;
+    height: 147px;
     display: flex;
     justify-content: center;
     justify-items: center;
     align-items: center;
+    box-shadow: 4px 4px  rgba(0,0,0,0.9);
+    margin-top: 0
+}
+.games{
+   
 }
