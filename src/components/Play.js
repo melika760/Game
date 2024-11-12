@@ -22,6 +22,9 @@ const Play = () => {
         }
         
 ]
+const Checkdata=(item)=>{
+console.log(item)
+}
   return (
     <section className={styles.container}>
         <div className={styles.wrap}>
@@ -32,7 +35,7 @@ const Play = () => {
      ? "rgb(224, 46, 88)"
      : "rgb(249, 216, 6)";
 return(
-    <div className={styles.imgwrap} style={{border:`20px solid ${bordercolor}`}}>
+    <div className={styles.imgwrap} style={{border:`20px solid ${bordercolor}`}} onClick={()=>Checkdata(item)} key={item.id}>
         <img src={item.img} alt={item.name} width={70} height={70}/>
     </div>
   )
