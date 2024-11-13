@@ -1,16 +1,18 @@
-import React,{Fragment} from 'react';
+import React from 'react';
 import './App.css';
 import Heading from './components/Heading';
 import Play from './components/Play';
 import Footer from './components/Footer';
+import { Contextprovider } from './components/context/ScoreContext';
 
 function App() {
   return (
-   <Fragment>
+  
+    <Contextprovider>
     <Heading/>
     <Play/>
     <Footer/>
-   </Fragment>
+    </Contextprovider>
 
     
   );

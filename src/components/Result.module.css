@@ -1,0 +1,73 @@
+.wraper{
+    width: 50%;
+    margin:3rem auto;
+    align-items: center;
+}
+.wrap{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container p{
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 2rem;
+    margin-bottom: 4rem
+}
+.imgwrap{
+    background-color: white;
+    border-radius: 100%;
+    width: 147px;
+    height: 147px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    box-shadow: 4px 4px  rgba(0,0,0,0.9);
+    margin-top: 0;
+    
+    
+}
+.wins{
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 1rem;
+    text-align: center;
+}
+.results{
+display: grid;
+grid-template-columns: auto;
+gap: 8px;
+}
+.results a{
+    text-decoration: none;
+    color: white;
+    margin-top: 5rem;
+}
+.results button{
+    border: 1px solid rgb(142, 135, 176);
+    background-color: rgb(3, 3, 54);
+    color: white;
+    border-radius: 8px;
+    width: 50%;
+    height: 40px;
+    float: right;
+    margin: 30px;
+    cursor: pointer;
+    margin: auto;
+}
+.results button:hover{
+    background-color: rgb(142, 135, 176);
+    color: rgb(3, 3, 54);
+    
+}
