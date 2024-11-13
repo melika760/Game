@@ -4,7 +4,6 @@ import styles from "./Heading.module.css"
 import { useScore } from './context/ScoreContext'
 const Heading = () => {
   const {score}=useScore()
-  console.log(score)
   return (
   <header className={styles.heading}>
    

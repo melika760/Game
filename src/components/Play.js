@@ -1,30 +1,28 @@
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { Fragment, useState } from 'react'
 import styles from "./Play.module.css"
 import paper from "../images/icon-paper.svg"
 import rock from "../images/icon-rock.svg"
 import scissors from "../images/icon-scissors.svg"
 import Result from './Result'
+import { useScore } from './context/ScoreContext'
 
 
 const Play = () => {
   const [content,setcontent]=useState(false)
   const[selectedItem,setItem]=useState({})
   const[housepicked,setHousepicked]=useState({})
-  const[win,setWin]=useState(false)
- 
- 
-  useEffect(()=>{
-    if((selectedItem.name==="Rock" && housepicked.name==="Scissors")||(selectedItem.name==="Scissors" && housepicked.name==="Paper")||(selectedItem.name==="Paper" && housepicked.name==="Rock")){
-setWin(true)
+ const {UpdateResult}=useScore();
+ const[result,setresult]=useState(null)
 
-    }
-    else{
-      setWin(false)
-     
-    }
-
-  },[selectedItem,housepicked])
-
+const determineResult=(playerchoice,housechoice)=>{
+  if((playerchoice==="Rock" && housechoice==="Scissors")||(playerchoice==="Scissors" && housechoice==="Paper")||(playerchoice==="Paper" && housechoice==="Rock")){
+   return "win"
+        } else if(playerchoice===housechoice){
+          return "draw"
+        }else{
+          return "lose"
+        }
+}
  
     const Items=[
     {name:"Paper",
@@ -45,12 +43,16 @@ setWin(true)
         }
         
 ]
+
 const Checkdata=(item)=>{
   const randomIndex=Math.floor(Math.random()*Items.length)
   const randomItem=Items[randomIndex]
   setcontent(true);
   setItem(item)
-  setHousepicked(randomItem)
+  setHousepicked(randomItem);
+  const gameResult=determineResult(item.name,randomItem.name);
+ setresult(gameResult)
+ UpdateResult(gameResult)
 
 }
   return (<Fragment>
@@ -66,7 +68,7 @@ return(
         })}
       </div>
     </section>}
-    {content && <Result selectedItem={selectedItem} housepicked={housepicked} win={win} setcontent={setcontent}/>}
+    {content && <Result selectedItem={selectedItem} housepicked={housepicked} win={result} setcontent={setcontent}/>}
   </Fragment>
    
   )

@@ -1,27 +1,8 @@
 
-import { useEffect, useState } from "react";
 import styles from "./Result.module.css"
-import { useScore } from "./context/ScoreContext";
-
 const Result = ({selectedItem,housepicked,win,setcontent}) => {
-  const[result,setresult]=useState()
-  const{UpdateResult}=useScore(null)
-  UpdateResult(result)
-  console.log(result)
-useEffect(()=>{
-  if(win){
-    setresult("win")
-    
-  }else{
-   setresult("lose")
-  }
-  
-},[win])
-
-
-
 let content=<div className={styles.results}>
-<p className={styles.wins}>You {result}</p>
+<p className={styles.wins}>You {win}</p>
 <button type="button" onClick={()=>setcontent(false)}>Play again</button>
 </div>
   return (
