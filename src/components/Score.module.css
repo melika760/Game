@@ -23,7 +23,7 @@
   input {
     margin-right: 8px;
     cursor: pointer;
-  
+  display:none;
     color: rgb(146, 90, 173);
   }
   

@@ -60,11 +60,9 @@ const Checkdata=(item)=>{
 
 }
   return (<Fragment>
-  
-    {!content && <section>
-      <Score/>
-
-      <div className={styles.container}>
+   <Score/>
+    {!content && 
+<section className={styles.container}>
         <div className={styles.wrap}>
         {Items.map((item)=>{
    
@@ -75,8 +73,8 @@ return(
   )
         })}
       </div>
-    </div>
     </section>
+  
     
     }
     {content && <Result selectedItem={selectedItem} housepicked={housepicked} win={result} setcontent={setcontent}/>}

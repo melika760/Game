@@ -26,18 +26,20 @@ const Score = () => {
     const[selected,setselected]=useState("")
     const {setLimit}=useScore()
 
-    // useEffect(()=>{
-    //     console.log(selected)
-    //     if(selected){
-    //         setLimit(selected)
-    //     }
-    // },[selected,setLimit])
+    useEffect(()=>{
+        
+        if(selected){
+          const limit=parseInt(selected)
+            setLimit(limit)
+            console.log(limit)
+        }
+    },[selected,setLimit])
   
    return(<div className={styles.Wraper}>
       <RadioGroup onChange={setselected} selected={selected}>
-        <RadioOption value={5}>Score 5</RadioOption>
-        <RadioOption value={10}>Score 10</RadioOption>
-        <RadioOption value={15}>Score 15</RadioOption>
+        <RadioOption value={"3"}>Score 3</RadioOption>
+        <RadioOption value={"5"}>Score 5</RadioOption>
+        <RadioOption value={"7"}>Score 7</RadioOption>
     </RadioGroup>
    </div>
   
