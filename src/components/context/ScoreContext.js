@@ -21,6 +21,8 @@ if(result==="win"){
    incrementScore()
 }else if(result==="lose" && score>0){
     decrementScore()
+}else if(result==="done"){
+  setscore(0)
 }
 }
 return(

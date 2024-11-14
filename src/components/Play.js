@@ -47,7 +47,8 @@ const determineResult=(playerchoice,housechoice)=>{
 
 const Checkdata=(item)=>{
   if(ScoreLimit && score >= ScoreLimit){
-    alert("YOU WIN THIS GAME!")
+    UpdateResult("done")
+    alert("YOU WIN THIS GAME 🎉!")
   }
   const randomIndex=Math.floor(Math.random()*Items.length)
   const randomItem=Items[randomIndex]
@@ -60,7 +61,7 @@ const Checkdata=(item)=>{
 
 }
   return (<Fragment>
-   <Score/>
+  
     {!content && 
 <section className={styles.container}>
         <div className={styles.wrap}>
