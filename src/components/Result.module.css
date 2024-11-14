@@ -35,8 +35,9 @@ gap: 10rem;
     justify-content: center;
     justify-items: center;
     align-items: center;
-    box-shadow: 4px 4px  rgba(0,0,0,0.9);
+    box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.4), 4px 4px rgba(0, 0, 0, 0.9);
     margin-top: 0;
+    border: 20px solid transparent;
     
     
 }
@@ -83,19 +84,20 @@ gap: 8px;
         gap: 3rem;
     }
     .container p{
-        font-size: 13px;
-        margin: 2rem;
+        font-size: 15px;
+        margin: 0 0 2rem 0;
     }
     .imgwrap{
         width: 87px;
         height: 87px;
+        border: 13px solid transparent;
       }
       .imgwrap img{
         width: 40px;
         height: 40px;
       }
       .wins{
-        font-size: 13px;
+        font-size: 24px;
       }
       .results{
         gap: 20px;

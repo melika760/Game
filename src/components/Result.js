@@ -10,14 +10,14 @@ let content=<div className={styles.results}>
       <div className={styles.wrap}>
       <div className={styles.container}>
         <p>You Picked</p>
-      <div className={styles.imgwrap} style={{border:`20px solid ${selectedItem.bordercolor}`}}>
+      <div className={styles.imgwrap} style={{borderColor:selectedItem.bordercolor}}>
       <img src={selectedItem.img} alt={selectedItem.name} width={70} height={70}/>
       </div>
       </div>
     
       <div className={styles.container}>
       <p>The House Picked</p>
-      <div className={styles.imgwrap} style={{border:`20px solid ${housepicked.bordercolor}`}}>
+      <div className={styles.imgwrap} style={{borderColor:housepicked.bordercolor}}>
       <img src={housepicked.img} alt={housepicked.name} width={70} height={70}/>
       </div>
       </div>

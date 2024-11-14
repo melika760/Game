@@ -17,9 +17,9 @@ const UpdateResult=(result)=>{
         setscore((prevScore) => (prevScore > 0 ? prevScore - 1 : 0));
       };
     
-if(result==="win"){
+if(result==="win 🤩"){
    incrementScore()
-}else if(result==="lose" && score>0){
+}else if(result==="lose 😖" && score>0){
     decrementScore()
 }else if(result==="done"){
   setscore(0)

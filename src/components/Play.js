@@ -16,11 +16,11 @@ const Play = () => {
 
 const determineResult=(playerchoice,housechoice)=>{
   if((playerchoice==="Rock" && housechoice==="Scissors")||(playerchoice==="Scissors" && housechoice==="Paper")||(playerchoice==="Paper" && housechoice==="Rock")){
-   return "win"
+   return "win 🤩"
         } else if(playerchoice===housechoice){
-          return "draw"
+          return "draw 🤨"
         }else{
-          return "lose"
+          return "lose 😖"
         }
 }
  
@@ -67,7 +67,7 @@ const Checkdata=(item)=>{
         {Items.map((item)=>{
    
 return(
-    <div className={styles.imgwrap} style={{border:`18px solid ${item.bordercolor}`}} onClick={()=>Checkdata(item)} key={item.id}>
+    <div className={styles.imgwrap} style={{borderColor:item.bordercolor}} onClick={()=>Checkdata(item)} key={item.id}>
         <img src={item.img} alt={item.name} width={70} height={70}/>
     </div>
   )

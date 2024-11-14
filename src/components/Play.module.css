@@ -36,10 +36,9 @@
     justify-content: center;
     justify-items: center;
     align-items: center;
-    box-shadow: 4px 4px  rgba(0,0,0,0.9);
     margin-top: 0;
-    box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.4), 4px 4px rgba(0, 0, 0, 0.9); /* Add inner shadow */
-    border: 18px solid transparent;
+    box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.4), 4px 4px rgba(0, 0, 0, 0.9);
+    border: 30px solid transparent;
 }
 
 @media(max-width:468px){
@@ -53,6 +52,7 @@
   .imgwrap{
     width: 87px;
     height: 87px;
+    border: 10px solid transparent;
   }
   .imgwrap img{
     width: 40px;
