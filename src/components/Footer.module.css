@@ -1,66 +1,95 @@
-.btn{
-    border: 1px solid rgb(142, 135, 176);
-    background-color: rgb(3, 3, 54);
-    color: white;
-    border-radius: 8px;
-    width: 10%;
-    height: 40px;
-    float: right;
-    margin: 30px;
-    cursor: pointer;
-}
-.btn:hover{
-    background-color: rgb(142, 135, 176);
-    color: rgb(3, 3, 54);
-}
-.modal{
-    width: 50%;
-    max-width: 400px;
-    background-color: white;
-    border-radius: 12px;
-    padding: 20px;
-    position: relative;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-    animation: fadeIn 0.1s ease-in-out;
-   
-}
-.modalContent{
- text-align: center;
- margin-top: 4rem;
+
+.btn {
+  border: 1px solid rgb(142, 135, 176);
+  background-color: rgb(3, 3, 54);
+  color: white;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  float: right;
+  margin-right: 1rem;
+  margin-bottom: 1rem
 }
 
-.overley{
-    position: fixed;
-    top:0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.btn:hover {
+  background-color: rgb(142, 135, 176);
+  color: rgb(3, 3, 54);
 }
-.closes{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
-.closes h3{
-    color: rgb(56, 56, 75);
-    font-size: 24px;
+
+.modal {
+  width: 90%;
+  max-width: 400px;
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease-in-out;
+  z-index: 10;
 }
-.closeButton{
-    cursor: pointer;
-   
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-  @keyframes fadeIn {
-    from {
+
+.modalHeader h3 {
+  color: rgb(56, 56, 75);
+  font-size: 24px;
+}
+
+.closeButton {
+  cursor: pointer;
+  transition: transform 0.2s;
+
+}
+
+.closeButton:hover {
+  transform: scale(1.1);
+}
+
+.modalContent {
+  text-align: center;
+  margin-top: 20px;
+}
+
+@keyframes fadeIn {
+  from {
       opacity: 0;
-      transform: scale(0.95);
-    }
-    to {
+      transform: scale(0.9);
+  }
+  to {
       opacity: 1;
       transform: scale(1);
-    }
   }
+}
+
+@media (max-width: 468px) {
+  .btn {
+      width: auto;
+  }
+  
+  .modal {
+      width: 80%;
+  }
+  
+  .modalHeader h3 {
+      font-size: 20px;
+  }
+}

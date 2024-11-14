@@ -68,7 +68,7 @@ const Checkdata=(item)=>{
         {Items.map((item)=>{
    
 return(
-    <div className={styles.imgwrap} style={{border:`20px solid ${item.bordercolor}`}} onClick={()=>Checkdata(item)} key={item.id}>
+    <div className={styles.imgwrap} style={{border:`18px solid ${item.bordercolor}`}} onClick={()=>Checkdata(item)} key={item.id}>
         <img src={item.img} alt={item.name} width={70} height={70}/>
     </div>
   )

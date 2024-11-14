@@ -30,3 +30,13 @@
   label {
     cursor: pointer;
   }
+
+  @media(max-width:468px){
+.Wraper{
+  width: 80%;
+}
+.radioOption {
+  padding: 12.5px;
+  font-size: 18px;
+}
+  }
