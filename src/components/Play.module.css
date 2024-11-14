@@ -37,7 +37,9 @@
     justify-items: center;
     align-items: center;
     box-shadow: 4px 4px  rgba(0,0,0,0.9);
-    margin-top: 0
+    margin-top: 0;
+    box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.4), 4px 4px rgba(0, 0, 0, 0.9); /* Add inner shadow */
+    border: 18px solid transparent;
 }
 
 @media(max-width:468px){
