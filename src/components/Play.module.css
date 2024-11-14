@@ -43,7 +43,7 @@
 
 @media(max-width:468px){
   .wrap{
-    gap: 5rem;
+    gap: 6rem;
     padding: 0px;
   }
   .container{
