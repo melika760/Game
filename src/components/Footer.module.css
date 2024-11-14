@@ -9,7 +9,8 @@
   transition: background-color 0.3s ease, color 0.3s ease;
   float: right;
   margin-right: 1rem;
-  margin-bottom: 1rem
+  margin-bottom: 1rem;
+  width: 15%;
 }
 
 .btn:hover {

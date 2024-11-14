@@ -5,8 +5,10 @@
 }
 .wrap{
     
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+gap: 10rem;
+  justify-items:center;
     align-items: center;
   
 }
@@ -15,6 +17,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2rem
 }
 .container p{
     color: white;
@@ -70,4 +73,34 @@ gap: 8px;
     background-color: rgb(142, 135, 176);
     color: rgb(3, 3, 54);
     
+}
+@media(max-width:468px){
+    .wraper{
+        width: 80%;
+      
+    }
+    .wrap{
+        gap: 3rem;
+    }
+    .container p{
+        font-size: 13px;
+        margin: 2rem;
+    }
+    .imgwrap{
+        width: 87px;
+        height: 87px;
+      }
+      .imgwrap img{
+        width: 40px;
+        height: 40px;
+      }
+      .wins{
+        font-size: 13px;
+      }
+      .results{
+        gap: 20px;
+      }
+      .results button{
+        width: 80%;
+      }
 }

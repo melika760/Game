@@ -5,7 +5,6 @@ import rock from "../images/icon-rock.svg"
 import scissors from "../images/icon-scissors.svg"
 import Result from './Result'
 import { useScore } from './context/ScoreContext'
-import Score from './Score'
 
 
 const Play = () => {
