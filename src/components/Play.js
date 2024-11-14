@@ -5,13 +5,14 @@ import rock from "../images/icon-rock.svg"
 import scissors from "../images/icon-scissors.svg"
 import Result from './Result'
 import { useScore } from './context/ScoreContext'
+import Score from './Score'
 
 
 const Play = () => {
   const [content,setcontent]=useState(false)
   const[selectedItem,setItem]=useState({})
   const[housepicked,setHousepicked]=useState({})
- const {UpdateResult}=useScore();
+ const {UpdateResult,ScoreLimit,score}=useScore();
  const[result,setresult]=useState(null)
 
 const determineResult=(playerchoice,housechoice)=>{
@@ -45,6 +46,9 @@ const determineResult=(playerchoice,housechoice)=>{
 ]
 
 const Checkdata=(item)=>{
+  if(ScoreLimit && score >= ScoreLimit){
+    alert("YOU WIN THIS GAME!")
+  }
   const randomIndex=Math.floor(Math.random()*Items.length)
   const randomItem=Items[randomIndex]
   setcontent(true);
@@ -56,7 +60,11 @@ const Checkdata=(item)=>{
 
 }
   return (<Fragment>
-    {!content &&  <section className={styles.container}>
+  
+    {!content && <section>
+      <Score/>
+
+      <div className={styles.container}>
         <div className={styles.wrap}>
         {Items.map((item)=>{
    
@@ -67,7 +75,10 @@ return(
   )
         })}
       </div>
-    </section>}
+    </div>
+    </section>
+    
+    }
     {content && <Result selectedItem={selectedItem} housepicked={housepicked} win={result} setcontent={setcontent}/>}
   </Fragment>
    

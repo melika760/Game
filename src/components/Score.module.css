@@ -1,0 +1,32 @@
+.Wraper{
+    margin: 3rem auto;
+    width: 50%;
+}
+.radioGroup {
+    display: flex;
+ justify-content: space-between;
+    align-items: flex-start;
+    align-items: center;
+  }
+  .radioOption {
+    margin-bottom: 8px;
+    cursor: pointer;
+    padding: 18px;
+    border-radius: 8px;
+    align-items: center;
+    text-align: center;
+    box-shadow: 4px 4px rgba(0,0,0,0.6);
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  input {
+    margin-right: 8px;
+    cursor: pointer;
+  
+    color: rgb(146, 90, 173);
+  }
+  
+  label {
+    cursor: pointer;
+  }

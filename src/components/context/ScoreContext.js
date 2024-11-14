@@ -1,11 +1,15 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 export const ScoreContext=React.createContext(null)
 export const useScore=()=>useContext(ScoreContext);
 export const Contextprovider=({children})=>{
-  const [score,setscore]=useState(10)
+  const [score,setscore]=useState(0)
+  const[ScoreLimit,setScoreLimit]=useState(5)
+  const setLimit=(limit)=>{
+    setScoreLimit(limit)
+  }
 const UpdateResult=(result)=>{
     const incrementScore = () => {
-        setscore((prevScore) => prevScore + 1);
+        setscore((prevScore) =>(prevScore<ScoreLimit ? prevScore+1:prevScore));
       };
     
      
@@ -20,7 +24,7 @@ if(result==="win"){
 }
 }
 return(
-    <ScoreContext.Provider value={{score,UpdateResult}}>
+    <ScoreContext.Provider value={{score,UpdateResult,setLimit,ScoreLimit}}>
         {children}
     </ScoreContext.Provider>
 )
