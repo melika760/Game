@@ -38,9 +38,52 @@ gap: 10rem;
     box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.4), 4px 4px rgba(0, 0, 0, 0.9);
     margin-top: 0;
     border: 20px solid transparent;
-    
-    
 }
+.animate{
+    animation: Showit 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    position: relative;
+}
+.imgwrap.animate::before, .imgwrap.animate::after,
+.imgwrap.animate .extraring,
+.imgwrap.animate .extraring2{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    animation: ring 4s  ease-out;
+    opacity: 0;
+}
+.imgwrap.animate::before {
+    width: 100%;
+    height: 100%;
+    animation-delay: 0s;
+    border: 10px solid  rgba(45, 45, 80, 0.4);; 
+  }
+  
+  .imgwrap.animate::after {
+    width: 120%;
+    height: 120%;
+    animation-delay: 0.5s;
+    border: 20px solid rgba(45, 45, 80, 0.2); 
+  }
+  
+  .imgwrap.animate .extraring {
+    width: 140%;
+    height: 140%;
+    animation-delay: 1s;
+    border: 10px solid rgba(45, 45, 80, 0.4); 
+  }
+  
+  .imgwrap.animate .extraring2 {
+    width: 160%;
+    height: 160%;
+    animation-delay: 1.3s;
+    border: 20px solid rgba(45, 45, 80, 0.2); 
+  }
 .wins{
     color: white;
     font-size: 24px;
@@ -74,6 +117,37 @@ gap: 8px;
     background-color: rgb(142, 135, 176);
     color: rgb(3, 3, 54);
     
+}
+@keyframes Showit{
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes ring{
+    0%{
+transform: translate(-50%,-50%) scale(1);
+opacity: 0.5;
+    }
+
+    100%{
+opacity: 0;
+transform: translate(-50%,-50%) scale(4);
+    }
+}
+@media(max-width:1024px){
+    .wraper{
+        width: 80%;
+      
+    }
+    .container p{
+        font-size: 20px;
+        margin: 0 0 2rem 0;
+    }
 }
 @media(max-width:468px){
     .wraper{

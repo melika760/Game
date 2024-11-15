@@ -26,11 +26,16 @@
   display:none;
     color: rgb(146, 90, 173);
   }
+ 
   
   label {
     cursor: pointer;
   }
-
+  @media(max-width:1024px){
+    .Wraper{
+      width: 80%;
+    }
+  }
   @media(max-width:468px){
 .Wraper{
   width: 80%;

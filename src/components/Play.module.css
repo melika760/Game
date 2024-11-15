@@ -40,7 +40,19 @@
     box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.4), 4px 4px rgba(0, 0, 0, 0.9);
     border: 30px solid transparent;
 }
-
+@media(max-width:1024px){
+  .wrap{
+    gap: 10rem;
+    padding: 0px;
+  }
+  .container{
+    width: 40%;
+  }
+  .imgwrap{
+    
+    border: 18px solid transparent;
+  }
+}
 @media(max-width:468px){
   .wrap{
     gap: 6rem;

@@ -1,21 +1,10 @@
-/* .heading{
-    display: flex;
-    border: 3px solid rgb(142, 135, 176);
-    justify-content: space-between;
-  margin:3rem auto;
-    border-radius: 8px;
-   width: 50%;
-   box-sizing: content-box ;
-   height: 170px;
-   align-items: center;
-} */
+
 .heading{
     display: grid;
     grid-template-columns: 1fr 1fr; 
  gap: 15rem;
   justify-items:baseline;
     align-items: center;
-  
     width: 50%;
     margin:3rem auto;
     border-radius: 8px;
@@ -37,15 +26,35 @@
     font-size: 24px;
     color: gray;
     margin-bottom: 0;
+   
 }
 .contents h2{
     font-size: 54px;
     margin-top: 0;
     color: rgb(56, 56, 75);
+   
 }
 .Img{
     margin: 2rem;
     height: 150px;
+}
+@keyframes showScore{
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@media(max-width:1024px){
+    .heading{
+        height: 280px;
+        width: 80%;
+       
+        gap:15rem
+    }
 }
 @media(max-width:468px){
     .heading{
