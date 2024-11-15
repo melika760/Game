@@ -32,21 +32,19 @@
     font-size: 54px;
     margin-top: 0;
     color: rgb(56, 56, 75);
-   
+    
+}
+.animate{
+    animation: showScore 0.3s ease-in-out;
 }
 .Img{
     margin: 2rem;
     height: 150px;
 }
 @keyframes showScore{
-    from {
-        opacity: 0;
-        transform: scale(0);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+ 0%{transform: scale(1);}
+ 50%{transform: scale(1.5);}
+ 100%{transform: scale(1);}
 }
 @media(max-width:1024px){
     .heading{
