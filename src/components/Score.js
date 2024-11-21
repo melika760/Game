@@ -36,6 +36,8 @@ const Score = () => {
     },[selected,setLimit])
   
    return(<div className={styles.Wraper}>
+       <h2>Choose Your Target Score and Reach your selected score to win!</h2>
+  
       <RadioGroup onChange={setselected} selected={selected}>
         <RadioOption value={"3"}>Score 3</RadioOption>
         <RadioOption value={"5"}>Score 5</RadioOption>
